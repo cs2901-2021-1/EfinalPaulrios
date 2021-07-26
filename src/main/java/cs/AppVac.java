@@ -1,17 +1,15 @@
 package cs;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public final class AppVac {
     private static AppVac instance;
-    public String username;
     List<Center> centerList;
-    public int centers = 1;
-    public int totalPeople = 22935533;
-    public int left = 22935533;
-    public boolean state;
+    private int centers = 1;
+    private int totalPeople = 22935533;
+    private int left = 22935533;
+    private boolean state;
 
     public AppVac() {
         centerList = new ArrayList<>();
@@ -38,5 +36,29 @@ public final class AppVac {
     public void logout()
     {
         this.state = false;
+    }
+
+    public int getCenters() {
+        return centers;
+    }
+
+    public void setCenters(int centers) {
+        this.centers = centers;
+    }
+
+    public int getTotalPeople() {
+        return totalPeople;
+    }
+
+    public int getLeft() {
+        return this.left;
+    }
+
+    public void setLeft(int left) {
+        this.left = left;
+    }
+
+    public boolean getState() {
+        return state;
     }
 }

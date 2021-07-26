@@ -1,23 +1,26 @@
 package cs;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class Inputclass {
+    static final Logger logger = Logger.getLogger(Inputclass.class.getName());
     Scanner a = new Scanner(System.in);
 
     public String getpass()
     {
-        System.out.print("Contraseña: \n");
+        logger.info("Contraseña: \n");
         return a.nextLine();
     }
     public String getuser()
     {
-        System.out.print("Usuario: \n");
+        logger.info("Usuario: \n");
         return a.nextLine();
     }
     public int getstate()
     {
-        System.out.print("state: \n");
+        logger.info("state: \n");
         return a.nextInt();
     }
+
 }
